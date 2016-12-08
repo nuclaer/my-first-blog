@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Новая статья
+{% endblock %}
+
+{% block content %}
+    <div id="create-article">
+        <h4>Новая статья</h4>
+        <form action={% url "create_article" %} method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Создать!</button>
+        </form>
+    </div>
+{% endblock %}

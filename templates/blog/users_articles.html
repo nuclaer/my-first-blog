@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ user.username|capfirst }}'s статьи
+{% endblock %}
+
+{% block content %}
+    <h4>
+        {{ user.username|capfirst }}'s статьи
+    </h4>
+
+    {% for article in articles %}
+        <h4><a href="{%  url 'article' article.id %}">{{ article.title }}</a></a></h4>
+        <pre>{{ article.get_short_text }}</pre>
+    {% empty %}
+        У вас нет созданых статей.
+    {% endfor %}
+
+{% endblock %}
+

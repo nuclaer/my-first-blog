@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+    <h4>Все пользователи</h4>
+    <ul>
+    {% for user in object_list %}
+        <li>
+            <a href="{% url 'users_articles' user.id %}">{{ user.get_full_name|default:user.username }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+

@@ -1,0 +1,4 @@
+Django==1.8.3
+django-disqus==0.5
+django-registration-redux==1.2
+djrill==1.4.0

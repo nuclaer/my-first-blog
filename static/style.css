@@ -1,0 +1,20 @@
+.main-content {
+    margin-top: 70px;
+}
+
+.messages li{
+    color: #00CA00;
+}
+
+label {
+    width: 165px;
+    text-align: right;
+}
+
+#create-article h4{
+    padding-left: 200px;
+}
+
+button, input[type="submit"]{
+    margin-left: 168px;
+}
